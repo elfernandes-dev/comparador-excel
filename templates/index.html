@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Comparator for Excel</title>
+    <style>
+        html{
+             background-color: #000;
+             color: #ccc;
+             font-family: 'Courier New', Courier, monospace;
+             text-align: center;
+         }
+         h2{
+             font-size: 40px;
+             font-weight: bolder;
+         }
+         label{
+            font-size: 21px;
+         }
+         hr{
+            width: 50%;
+         }
+         .files, .numbers, button{
+             font-weight: normal; 
+             font-size: 17px;
+             border-radius: 15Px;
+             border-style: groove;
+             outline: none;
+         }
+         .numbers{
+             width: 55px;
+             height: 30px;
+         }
+         button:hover {
+             background-color: rgb(21, 255, 0);
+             text-decoration: underline;
+             cursor: pointer;
+             box-shadow: 0px 0px 5px #ccc;
+         }
+         @media (max-width: 980px) {
+            hr{
+                width: 70%;
+            }
+            }
+        @media (max-width: 495px) {
+            label{
+                font-size: 18px;
+            }
+            .files, .numbers, button {
+                font-size: 15px;
+            }
+        }
+        @media (max-width: 435px) {
+            h2 {
+                font-size: 30px;
+            }
+            label{
+                font-size: 15px;
+            }
+            .files, .numbers, button {
+                font-size: 13px;
+            }
+            .numbers{
+             width: 40px;
+             height: 25px;
+         }
+        }
+     </style>
+</head>
+<body>
+    <h2>Comparador de Arquivos para Excel</h2>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <label for="file1">Arquivo Original:</label>
+        <input type="file" class="files" name="file1" required><br><br>
+
+        <label for="file2">Arquivo Atualizado:</label>
+        <input type="file" class="files" name="file2" required><br><br>
+        <hr>
+
+        <label for="reference_column">Número da Coluna de Referência<br> (Ex.: 1 = A, 2 = B, 3 = C, ...):</label>
+        <input type="number" class="numbers" name="reference_column" required min="1"><br><br>
+
+        <label for="start_row">Número da Linha Inicial:</label>
+        <input type="number" class="numbers" name="start_row" required min="1"><br><br>
+
+        <button type="submit">Comparar Arquivos</button>
+    </form>
+</body>
+</html>
