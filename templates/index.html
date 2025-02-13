@@ -24,13 +24,25 @@
          .files, .numbers, button{
              font-weight: normal; 
              font-size: 17px;
-             border-radius: 15Px;
+             border-radius: 10Px;
              border-style: groove;
              outline: none;
          }
          .numbers{
+             text-align: center;
              width: 55px;
              height: 30px;
+         }
+         button {
+             height: 35px;
+         }
+         .files:hover {
+             background-color: rgb(21, 255, 0) ;
+             color: #000;
+             cursor: pointer;
+         }
+         .numbers:hover {
+             background-color: rgb(21, 255, 0) ;
          }
          button:hover {
              background-color: rgb(21, 255, 0);
@@ -69,7 +81,7 @@
      </style>
 </head>
 <body>
-    <h2>Comparador de Arquivos para Excel</h2>
+    <h2>Comparador de Arquivos para Excel - <i>FCEx 1.0</i></h2>
     <form action="/" method="post" enctype="multipart/form-data">
         <label for="file1">Arquivo Original:</label>
         <input type="file" class="files" name="file1" required><br><br>
